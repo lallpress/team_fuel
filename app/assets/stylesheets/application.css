@@ -13,3 +13,28 @@
  *= require_tree .
  *= require_self
  */
+
+
+ 
+h1, h2, p {
+    text-align: center;
+    color: #27ae60;
+}
+
+h1 {
+    font-family: 'Droid Serif', serif;
+}
+
+h2, p {
+    font-family: 'Lato', sans-serif;
+}
+
+#BannerDiv {
+    border-radius: 25px;
+    border: 2px solid #e67e22;
+    padding: 20px; 
+    width: 300px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+}
