@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170620130919) do
+ActiveRecord::Schema.define(version: 20170701233527) do
 
   create_table "donations", force: :cascade do |t|
-    t.text     "item"
+    t.string   "item"
     t.integer  "quantity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
