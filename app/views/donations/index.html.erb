@@ -1,0 +1,18 @@
+<h1>List of Current Donations</h1>
+
+<table>
+  <tr>
+    <th>Item</th>
+    <th>Quantity</th>
+    <th colspan="2"></th>
+  </tr>
+ 
+  <% @donations.each do |donation| %>
+    <tr>
+      <td><%= donation.item %></td>
+      <td><%= donation.quantity %></td>
+      <td><%= link_to 'Show', donation_path(donation) %></td>
+      <td><%= link_to 'Edit', edit_donation_path(donation) %></td>
+    </tr>
+  <% end %>
+</table>
