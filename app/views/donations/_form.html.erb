@@ -1,0 +1,31 @@
+<%= form_for @donation do |f| %>
+
+  <% if @donation.errors.any? %>
+    <div id= "error_explanation">
+        <h2>
+            <%= pluralize(@donation.errors.count, "error") %> prohibited
+            this item from being saved:
+        </h2>
+        <u1>
+            <% @donation.errors.full_messages.each do |msg| %>
+                <li><%= msg %></li>
+            <% end %>
+        </u1>
+    </div>
+  <% end %>
+  
+  <p>
+      <%= f.label :item %><br>
+      <%= f.text_field :item %>
+  </p>
+  
+  <p>
+      <%= f.label :quantity %><br>
+      <%= f.text_field :quantity %>
+  </p>
+  
+  <p>
+      <%= f.submit %>
+  </p>
+  
+<% end %>
