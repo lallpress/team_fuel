@@ -35,6 +35,13 @@ class DonationsController < ApplicationController
         end
     end
     
+    def destroy
+        @donation = Donation.find(params[:id])
+        @donation.destroy
+        
+        redirect_to donations_path
+    end
+    
     private
         def donation_params
             params.require(:donation).permit(:item, :quantity)
