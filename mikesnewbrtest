@@ -1,0 +1,26 @@
+git clone https://github.com/lallpress/team_fuel.git
+iamgroot:~/workspace $ cd team_fuel
+iamgroot:~/workspace/team_fuel (master) $ git config -l
+user.name=i_am_groot
+user.email=software.4.systems@gmail.com
+core.editor=nano
+core.whitespace=off
+core.excludesfile=~/.gitignore
+advice.statusuoption=false
+color.ui=true
+push.default=current
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+remote.origin.url=https://github.com/lallpress/team_fuel.git
+remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*
+branch.master.remote=origin
+branch.master.merge=refs/heads/master
+iamgroot:~/workspace/team_fuel (master) $ 
+iamgroot:~/workspace/team_fuel (master) $ git branch --track mikesnewbr master
+Branch mikesnewbr set up to track local branch master.
+iamgroot:~/workspace/team_fuel (master) $ git checkout mikesnewbr                                                                                         
+Switched to branch 'mikesnewbr'
+Your branch is up-to-date with 'master'.
+iamgroot:~/workspace/team_fuel (mikesnewbr) $
