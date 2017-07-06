@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   resources :items
-  resources :donations
+  resources :organizations
   
   root 'welcome#index'
 
