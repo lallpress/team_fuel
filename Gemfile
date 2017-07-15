@@ -36,10 +36,22 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+ 
   gem 'byebug'
+  gem 'database_cleaner', '1.4.1'
+  gem 'capybara', '2.4.4'
+  gem 'launchy'
+  gem 'rspec-rails', '3.3.2'
+  gem 'ZenTest', '4.11.0'
   
   # Use sqlite3 as the database for Active Record in dev and test only
   gem 'sqlite3'
+end
+
+group :test do
+  gem 'simplecov', :require => false
+  gem 'cucumber-rails', :require => false
+  gem 'cucumber-rails-training-wheels'
 end
 
 group :development do
@@ -54,3 +66,4 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
+
