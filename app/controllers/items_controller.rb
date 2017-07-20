@@ -1,16 +1,24 @@
+##
+# This class provides methods to create, read, update, and 
+# delete Items
+
 class ItemsController < ApplicationController
+    # Gets all Items
     def index
         @items = Item.all
     end
     
+    # Gets an item based on ID
     def show
         @item = Item.find(params[:id])
     end
     
+    # Creates a new instance of Item
     def new
         @item = Item.new
     end
     
+    # Creates a new Item with parameters to persist to the database
     def create
         @item = Item.new(item_params)
         
@@ -21,10 +29,12 @@ class ItemsController < ApplicationController
         end
     end
     
+    # Edits an Item based on ID
     def edit
         @item = Item.find(params[:id])
     end
     
+    # Edits an Item based on ID
     def update
         @item = Item.find(params[:id])
         
@@ -35,6 +45,7 @@ class ItemsController < ApplicationController
         end
     end
     
+    # Deletes an Item based on ID.
     def destroy
         @item = Item.find(params[:id])
         @item.destroy
