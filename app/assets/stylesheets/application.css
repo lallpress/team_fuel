@@ -14,7 +14,12 @@
  *= require_self
  */
 
-
+u1 {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
  
 h1, h2, p {
     text-align: center;
@@ -38,3 +43,4 @@ h2, p {
     align-items: center;
     justify-content: center;
 }
+

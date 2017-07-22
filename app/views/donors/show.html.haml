@@ -1,0 +1,9 @@
+%p
+  %strong Donor:
+  = @donor.donorName
+%p
+  %strong Phone:
+  = @donor.phoneNum
+= link_to 'Edit', edit_donor_path(@donor)
+|
+= link_to 'Back', donors_path

@@ -1,0 +1,10 @@
+%h1 Current Donors
+= link_to 'New Donor', new_donor_path
+%table
+    %tr
+        %th Donor
+        %th Phone
+    - @donors.each do |donor|
+        %tr
+            %td= link_to donor.donorName, donor_path(donor)
+            %td= donor.phoneNum

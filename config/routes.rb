@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   resources :items
   resources :organizations
+  resources :donors
   
   root 'welcome#index'
 

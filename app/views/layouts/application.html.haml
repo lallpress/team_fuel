@@ -1,0 +1,19 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title= @page_title or "Fuel Donation Management System"
+    = stylesheet_link_tag "application" 
+    :css 
+      #{yield :stylesheets}
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    %u1
+      %li
+        %a{:href => items_path} Items
+      %li
+        %a{:href => donors_path} Donors
+      %li
+        %a{:href => organizations_path} Organizations
+    #content= content_for?(:content) ? yield(:content) : yield
