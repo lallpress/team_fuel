@@ -17,3 +17,10 @@
       %li
         %a{:href => organizations_path} Organizations
     #content= content_for?(:content) ? yield(:content) : yield
+    
+    #main
+      - if flash[:notice]
+        #notice.message= flash[:notice]
+      - elsif flash[:warning]
+        #warning.message= flash[:warning]
+
