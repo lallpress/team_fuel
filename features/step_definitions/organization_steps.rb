@@ -1,10 +1,10 @@
 # Add a declarative step here for populating the DB with movies.
 
-Given /I am on the home page/ do 
+Given /I am on the Fuel Donation Management System home page/ do 
   #fail "Unimplemented"
 end
 
-Then /I expect to be directed to the "(.*)"/ do
+Then /I expect to be directed to the Current Organizations/ do
 end
 
 Given /I am on the Organizations page/ do |organization_table|
@@ -20,23 +20,32 @@ When /^I follow 'Organizations'$/ do
   
 end
 
-Then /^I expect to be directed to the Current Organizations page$/ do
-  pending # Write code here that turns the phrase above into concrete actions
+Then /I expect to be directed to the Current Organizations page$/ do
+ 
 end
 
 Given /I am on the Current Organizations page/ do 
 end
 
-And /^(?:|I )select "Create Organization" from "Current Organizations"$/ do |value, field|
-  select(value, :from => field)
+When(/^I follow 'New Organization'$/) do
 end
 
-Then /^I should see the updated organizations displayed/ do |text|
-  if page.respond_to? :should
-    page.should have_content(text)
-  else
-    assert page.has_content?(text)
-  end
+And /I fill in "Organization" with "UNO"/ do
+end
+
+And /I fill in "Address" with "6700 Dodge Street"/ do
+end
+
+And /I fill in "Phone" with "402-554-2100"/ do
+end
+
+And /I fill in "Contact" with "Huong"/ do
+end
+
+And /^I select "Create Organization" from "Current Organizations"$/ do 
+end
+
+Then /^I should see the updated organizations displayed/ do 
 end
 
 Then /^I should see \/([^\/]*)\/$/ do |regexp|
@@ -58,6 +67,14 @@ end
 Then /I should be on the edit donor page/ do
 end
 
+Given /I am on the edit form for "XYZ Corp"/ do
+end
+
+And /I fill in "Phone" with "555-987-1234"/ do
+end
+
+Then /^the phone number for "XYZ Corp" should be "555-987-1234"/ do
+end
 
 
 
@@ -75,6 +92,4 @@ Then /^I expect to see the organizations add form displayed/ do
   fail "Unimplemented"
 end
 
-When (/^I select the  "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
-end
+
