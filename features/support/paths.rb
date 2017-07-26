@@ -14,10 +14,17 @@ module NavigationHelpers
     case page_name
 
     when /^the home\s?page$/
-      '/'
+      '/donors'
+    
+    when /^the home\s?page$/
+      '/organizations'
       
-    when /^the "(.*)" page$/
-      '/'
+    when /^the (Fuel)?home\s?page$/ then '/organizations'
+    when /^the Fuel home page$/ then '/organizations'
+    when /^the home page$/ then '/organizations'
+      
+    when /^the Current Organizations page$/
+      organization_path Organization.all
 
     when /^the edit donor page for "(.+)"$/
       edit_donor_path

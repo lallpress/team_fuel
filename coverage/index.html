@@ -14,27 +14,27 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-26T10:53:16+00:00">2017-07-26T10:53:16+00:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-07-26T14:51:30+00:00">2017-07-26T14:51:30+00:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="red">0.0%</span></span>
+    (<span class="covered_percent"><span class="red">1.02%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.0
+         0.01
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>13</b> files in total.
-    <b>205</b> relevant lines. 
-    <span class="green"><b>0</b> lines covered</span> and
-    <span class="red"><b>205</b> lines missed </span>
+    <b>196</b> relevant lines. 
+    <span class="green"><b>2</b> lines covered</span> and
+    <span class="red"><b>194</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -63,10 +63,10 @@
       <tr>
         <td class="strong"><a href="#dea44cf521db694fc6a53fd05634524b030dd6bd" class="src_link" title="app/controllers/donors_controller.rb">app/controllers/donors_controller.rb</a></td>
         <td class="red strong">0.0 %</td>
-        <td>57</td>
-        <td>57</td>
+        <td>49</td>
+        <td>49</td>
         <td>0</td>
-        <td>57</td>
+        <td>49</td>
         <td>0.0</td>
       </tr>
       
@@ -152,12 +152,12 @@
       
       <tr>
         <td class="strong"><a href="#097a9bedc47873c7016781c1b2d792d5f6f8ca19" class="src_link" title="app/models/donor.rb">app/models/donor.rb</a></td>
-        <td class="red strong">0.0 %</td>
+        <td class="green strong">100.0 %</td>
         <td>3</td>
-        <td>3</td>
+        <td>2</td>
+        <td>2</td>
         <td>0</td>
-        <td>3</td>
-        <td>0.0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -200,9 +200,9 @@
   <a name="Controllers"></a>
   <div>
     <b>5</b> files in total.
-    <b>186</b> relevant lines. 
+    <b>178</b> relevant lines. 
     <span class="green"><b>0</b> lines covered</span> and
-    <span class="red"><b>186</b> lines missed </span>
+    <span class="red"><b>178</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -231,10 +231,10 @@
       <tr>
         <td class="strong"><a href="#dea44cf521db694fc6a53fd05634524b030dd6bd" class="src_link" title="app/controllers/donors_controller.rb">app/controllers/donors_controller.rb</a></td>
         <td class="red strong">0.0 %</td>
-        <td>57</td>
-        <td>57</td>
+        <td>49</td>
+        <td>49</td>
         <td>0</td>
-        <td>57</td>
+        <td>49</td>
         <td>0.0</td>
       </tr>
       
@@ -276,20 +276,20 @@
           <div class="file_list_container" id="Models">
   <h2>
     <span class="group_name">Models</span>
-    (<span class="covered_percent"><span class="red">0.0%</span></span>
+    (<span class="covered_percent"><span class="red">25.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="red">
-         0.0
+         0.25
        </span>
     </span> hits/line)
   </h2>
   <a name="Models"></a>
   <div>
     <b>3</b> files in total.
-    <b>9</b> relevant lines. 
-    <span class="green"><b>0</b> lines covered</span> and
-    <span class="red"><b>9</b> lines missed </span>
+    <b>8</b> relevant lines. 
+    <span class="green"><b>2</b> lines covered</span> and
+    <span class="red"><b>6</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -307,12 +307,12 @@
       
       <tr>
         <td class="strong"><a href="#097a9bedc47873c7016781c1b2d792d5f6f8ca19" class="src_link" title="app/models/donor.rb">app/models/donor.rb</a></td>
-        <td class="red strong">0.0 %</td>
+        <td class="green strong">100.0 %</td>
         <td>3</td>
-        <td>3</td>
+        <td>2</td>
+        <td>2</td>
         <td>0</td>
-        <td>3</td>
-        <td>0.0</td>
+        <td>1.0</td>
       </tr>
       
       <tr>
@@ -602,9 +602,9 @@
     <h3>app/controllers/donors_controller.rb</h3>
     <h4><span class="red">0.0 %</span> covered</h4>
     <div>
-      <b>57</b> relevant lines. 
+      <b>49</b> relevant lines. 
       <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>57</b> lines missed.</span>
+      <span class="red"><b>49</b> lines missed.</span>
     </div>
   </div>
   
@@ -728,139 +728,139 @@
         <li class="missed" data-hits="0" data-linenumber="20">
           
           
-          <code class="ruby">        @donor = Donor.new(donor_params)</code>
+          <code class="ruby">        @donor = Donor.create!(donor_params)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="21">
           
           
-          <code class="ruby">        </code>
+          <code class="ruby">        flash[:notice] = &quot;Donor was successfully added!&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="22">
           
           
-          <code class="ruby">        if @donor.save</code>
+          <code class="ruby">        redirect_to donors_path</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="23">
           
           
-          <code class="ruby">            redirect_to @donor</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="24">
           
           
-          <code class="ruby">        else</code>
+          <code class="ruby">    </code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="25">
           
           
-          <code class="ruby">            render &#39;new&#39;</code>
+          <code class="ruby">    # Edits a Donor based on ID</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="26">
           
           
-          <code class="ruby">        end</code>
+          <code class="ruby">    def edit</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="27">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">        @donor = Donor.find(params[:id])</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="28">
           
           
-          <code class="ruby">    </code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="29">
           
           
-          <code class="ruby">    # Edits a Donor based on ID</code>
+          <code class="ruby">    </code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="30">
           
           
-          <code class="ruby">    def edit</code>
+          <code class="ruby">    # Updates a Donor based on ID</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="31">
           
           
-          <code class="ruby">        @donor = Donor.find(params[:id])</code>
+          <code class="ruby">    def update</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="32">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">        @donor = Donor.find(params[:id])</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="33">
           
           
-          <code class="ruby">    </code>
+          <code class="ruby">        @donor.update_attributes!(donor_params)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="34">
           
           
-          <code class="ruby">    # Updates a Donor based on ID</code>
+          <code class="ruby">        flash[:notice] = &quot;Donor was successfully updated!&quot;</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="35">
           
           
-          <code class="ruby">    def update</code>
+          <code class="ruby">        redirect_to donors_path</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="36">
           
           
-          <code class="ruby">        @donor = Donor.find(params[:id])</code>
+          <code class="ruby">    end</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="37">
           
           
-          <code class="ruby">        </code>
+          <code class="ruby">    </code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="38">
           
           
-          <code class="ruby">        if @donor.update(donor_params)</code>
+          <code class="ruby">    # Deletes a donor based on ID</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="39">
           
           
-          <code class="ruby">            redirect_to @donor</code>
+          <code class="ruby">    def destroy</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="40">
           
           
-          <code class="ruby">        else</code>
+          <code class="ruby">        @donor = Donor.find(params[:id])</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="41">
           
           
-          <code class="ruby">            render &#39;edit&#39;</code>
+          <code class="ruby">        @donor.destroy</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="42">
           
           
-          <code class="ruby">        end</code>
+          <code class="ruby">        redirect_to donors_path</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="43">
@@ -878,76 +878,28 @@
         <li class="missed" data-hits="0" data-linenumber="45">
           
           
-          <code class="ruby">    # Deletes a donor based on ID</code>
+          <code class="ruby">    private</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="46">
           
           
-          <code class="ruby">    def destroy</code>
+          <code class="ruby">        def donor_params</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="47">
           
           
-          <code class="ruby">        @donor = Donor.find(params[:id])</code>
+          <code class="ruby">            params.require(:donor).permit(:donorName, :phoneNum)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="48">
           
           
-          <code class="ruby">        @donor.destroy</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="49">
-          
-          
-          <code class="ruby">        </code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="50">
-          
-          
-          <code class="ruby">        redirect_to donors_path</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="51">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="52">
-          
-          
-          <code class="ruby">    </code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="53">
-          
-          
-          <code class="ruby">    private</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="54">
-          
-          
-          <code class="ruby">        def donor_params</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="55">
-          
-          
-          <code class="ruby">            params.require(:donor).permit(:donorName, :phoneNum)</code>
-        </li>
-      
-        <li class="missed" data-hits="0" data-linenumber="56">
-          
-          
           <code class="ruby">        end</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="57">
+        <li class="missed" data-hits="0" data-linenumber="49">
           
           
           <code class="ruby">end</code>
@@ -1666,7 +1618,7 @@
         <li class="missed" data-hits="0" data-linenumber="53">
           
           
-          <code class="ruby">        redirect_to organization_path</code>
+          <code class="ruby">        redirect_to @organization</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="54">
@@ -1696,7 +1648,7 @@
         <li class="missed" data-hits="0" data-linenumber="58">
           
           
-          <code class="ruby">            params.require(:organization).permit(:org_name)</code>
+          <code class="ruby">            params.require(:organization).permit(:org_name, :address, :phone, :contact_id)</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="59">
@@ -1917,30 +1869,30 @@
         <div class="source_table" id="097a9bedc47873c7016781c1b2d792d5f6f8ca19">
   <div class="header">
     <h3>app/models/donor.rb</h3>
-    <h4><span class="red">0.0 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>3</b> relevant lines. 
-      <span class="green"><b>0</b> lines covered</span> and
-      <span class="red"><b>3</b> lines missed.</span>
+      <b>2</b> relevant lines. 
+      <span class="green"><b>2</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
   <pre>
     <ol>
       
-        <li class="missed" data-hits="0" data-linenumber="1">
-          
+        <li class="covered" data-hits="1" data-linenumber="1">
+          <span class="hits">1</span>
           
           <code class="ruby">class Donor &lt; ActiveRecord::Base</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="2">
-          
+        <li class="covered" data-hits="1" data-linenumber="2">
+          <span class="hits">1</span>
           
           <code class="ruby">    validates_presence_of :donorName, :phoneNum</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="3">
+        <li class="never" data-hits="" data-linenumber="3">
           
           
           <code class="ruby">end</code>
@@ -2011,7 +1963,7 @@
         <li class="missed" data-hits="0" data-linenumber="2">
           
           
-          <code class="ruby">    validates :org_name, presence: true</code>
+          <code class="ruby">    validates_presence_of :org_name, :address, :phone, :contact_id</code>
         </li>
       
         <li class="missed" data-hits="0" data-linenumber="3">
