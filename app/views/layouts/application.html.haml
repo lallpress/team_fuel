@@ -11,11 +11,7 @@
   %body
     %u1
       %li
-        %a{:href => items_path} Items
-      %li
-        %a{:href => donors_path} Donors
-      %li
-        %a{:href => organizations_path} Organizations
+        %a{:href => welcome_index_path} Fuel Donation Management System
     #content= content_for?(:content) ? yield(:content) : yield
     
     #main
