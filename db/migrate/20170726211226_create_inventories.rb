@@ -3,9 +3,9 @@ class CreateInventories < ActiveRecord::Migration
     create_table :inventories do |t|
       t.string :itemName
       t.text :text
-      t.number :quantity
+      t.integer :quantity
       t.text :text
-      t.date/time :expDate
+      t.datetime :expDate
       t.text :text
       t.string :category
       t.text :text
