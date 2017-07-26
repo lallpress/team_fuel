@@ -19,6 +19,12 @@ module NavigationHelpers
     when /^the "(.*)" page$/
       '/'
 
+    when /^the edit donor page for "(.+)"$/
+      edit_donor_path
+      
+    when /^the donors page$/
+      donors_path
+      
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #

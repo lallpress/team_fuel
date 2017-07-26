@@ -50,11 +50,11 @@ class OrganizationsController < ApplicationController
         @organization = Organization.find(params[:id])
         @organization.destroy
         
-        redirect_to organization_path
+        redirect_to @organization
     end
     
     private
         def organization_params
-            params.require(:organization).permit(:org_name)
+            params.require(:organization).permit(:org_name, :address, :phone, :contact_id)
         end
 end
