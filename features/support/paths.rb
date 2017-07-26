@@ -19,9 +19,13 @@ module NavigationHelpers
     when /^the home\s?page$/
       '/organizations'
       
-    when /^the (Fuel)?home\s?page$/ then '/organizations'
-    when /^the Fuel home page$/ then '/organizations'
+    when /^the (Fuel Donation Management System)?home\s?page$/ then '/organizations'
+    when /^the Fuel Donation Management System home page$/ then '/organizations'
     when /^the home page$/ then '/organizations'
+      
+    when /^the (Fuel Donation Management System)?home\s?page$/ then '/donors'
+    when /^the Fuel Donation Management System home page$/ then '/donors'
+    when /^the home page$/ then '/donors'
       
     when /^the Current Organizations page$/
       organization_path Organization.all
@@ -30,7 +34,10 @@ module NavigationHelpers
       edit_donor_path
       
     when /^the donors page$/
-      donors_path
+      donors_path Donors.all
+      
+    when /^the edit donor page$/
+      edit_donor_path
       
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

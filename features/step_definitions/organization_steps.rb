@@ -49,6 +49,16 @@ Then /^I should see \/([^\/]*)\/$/ do |regexp|
   end
 end
 
+ Given /I am on the Donors page/ do 
+end
+
+When /I follow "XYZ Corp"/ do
+end
+
+Then /I should be on the edit donor page/ do
+end
+
+
 
 
 
@@ -63,4 +73,8 @@ end
 Then /^I expect to see the organizations add form displayed/ do
   # Make sure that all the movies in the app are visible in the table
   fail "Unimplemented"
+end
+
+When (/^I select the  "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
 end

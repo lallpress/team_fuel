@@ -12,7 +12,7 @@ Background: donor in database
     | Test Inc. | 402-111-1111  |
 
 Scenario: Access edit donors form from donors page
-  Given I am on the donors page
+  Given I am on the Donors page
   When I follow "XYZ Corp"
   Then I should be on the edit donor page
   
