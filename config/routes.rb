@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :items
   resources :organizations
   resources :donors
+
   
   root 'welcome#index'
 
