@@ -1,6 +1,11 @@
 {
   "Cucumber Features": {
     "coverage": {
+      "/home/ubuntu/workspace/team_fuel/app/models/donor.rb": [
+        1,
+        1,
+        null
+      ],
       "/home/ubuntu/workspace/team_fuel/app/controllers/application_controller.rb": [
         0,
         0,
@@ -218,13 +223,8 @@
         0,
         0,
         0
-      ],
-      "/home/ubuntu/workspace/team_fuel/app/models/donor.rb": [
-        0,
-        0,
-        0
       ]
     },
-    "timestamp": 1501088189
+    "timestamp": 1501083382
   }
 }
