@@ -7,16 +7,16 @@
           %li= message
 
   .field
-    = f.label :itemnum
+    = f.label :itemnum :ItemNum
     = f.number_field :itemnum
   .field
-    = f.label :orgnum
+    = f.label :orgnum :Organization
     = f.number_field :orgnum
   .field
-    = f.label :quantity
+    = f.label :quantity :Quantity
     = f.number_field :quantity
   .field
-    = f.label :expires
+    = f.label :expires :ExpDate
     = f.date_select :expires
   .actions
     = f.submit 'Save'

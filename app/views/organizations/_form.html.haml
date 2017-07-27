@@ -1,32 +1,27 @@
-= form_for @inventory do |f|
-  - if @inventory.errors.any?
-    #error_explanation
-      %h2
-        = pluralize(@inventory.errors.count, 'error')
-        prohibited this inventory from being saved:
-      %u1
-        - @inventory.errors.full_messages.each do |msg|
-          %li= msg
-  %p
-    = f.label :itemnum :ItemNum
-    %br/
-    = f.text_field :itemnum
-   %p
-    = f.label :orgnum :Organization
-    %br/
-    = f.text_field :orgnum
-  %p
-    = f.label :quantity :Quantity
-    %br/
-    = f.text_field :quantity
-  %p
-    = f.label :expires :ExpDate
-    %br/
-    = f.text_field :expires
-  %p
-    = f.label :Category
-    %br/
-    = f.text_field :category
- 
-  %p
-    = f.submit
+= form_for @organization do |f|
+    - if @organization.errors.any?
+        #error_explanation
+            %h2
+                = pluralize(@organization.errors.count, 'error')
+                prohibited this organization from being saved:
+            %u1
+                - @organization.errors.full_messages.each do |msg|
+                    %li= msg
+    %p
+        = f.label :org_name, :Organization
+        %br/
+        = f.text_field :org_name
+    %p
+        = f.label  :address, :Address
+        %br/
+        = f.text_field :address
+    %p
+        = f.label :phone, :Phone
+        %br/
+        = f.text_field :phone
+    %p
+        = f.label :contact_id, :Contact
+        %br/
+        = f.text_field :contact_id
+    %p
+        = f.submit
