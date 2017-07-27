@@ -17,13 +17,9 @@ class DonorsController < ApplicationController
     
     # Creates a new Donor with parameters to persist to the database
     def create
-        @donor = Donor.new(donor_params)
-        
-        if @donor.save
-            redirect_to @donor
-        else
-            render 'new'
-        end
+        @donor = Donor.create!(donor_params)
+        flash[:notice] = "Donor was successfully added!"
+        redirect_to donors_path
     end
     
     # Edits a Donor based on ID
@@ -34,19 +30,15 @@ class DonorsController < ApplicationController
     # Updates a Donor based on ID
     def update
         @donor = Donor.find(params[:id])
-        
-        if @donor.update(donor_params)
-            redirect_to @donor
-        else
-            render 'edit'
-        end
+        @donor.update_attributes!(donor_params)
+        flash[:notice] = "Donor was successfully updated!"
+        redirect_to donors_path
     end
     
     # Deletes a donor based on ID
     def destroy
         @donor = Donor.find(params[:id])
         @donor.destroy
-        
         redirect_to donors_path
     end
     
