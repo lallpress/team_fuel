@@ -19,22 +19,28 @@ module NavigationHelpers
     when /^the home\s?page$/
       '/organizations'
       
-    when /^the (Fuel Donation Management System)?home\s?page$/ then '/organizations'
-    when /^the Fuel Donation Management System home page$/ then '/organizations'
-    when /^the home page$/ then '/organizations'
+    when /^the (Fuel Donation Management System )?home\s?page$/ then '/welcome/index'
+    #when /^the Fuel Donation Management System home page$/ then '/organizations'
+    #when /^the home page$/ then '/organizations'
       
-    when /^the (Fuel Donation Management System)?home\s?page$/ then '/donors'
-    when /^the Fuel Donation Management System home page$/ then '/donors'
-    when /^the home page$/ then '/donors'
+   
+    #when /^the Fuel Donation Management System home page$/ then '/donors'
+    #when /^the home page$/ then '/donors'
       
-    when /^the Current Organizations page$/
-      organization_path Organization.all
-
+    when /^the Current Organizations page$/ then '/organizations'
+#      organization_path Organization.all
+    when /^the Current Donors page$/ then '/donors'
+      
+    when /^the New Donor page$/ then '/donors/new'
+    
+    when /^the New Donor page$/
+      new_donor_path
+     
     when /^the edit donor page for "(.+)"$/
       edit_donor_path
       
-    when /^the donors page$/
-      donors_path Donors.all
+    when /^the donors page$/ 
+      donors_path
       
     when /^the edit donor page$/
       edit_donor_path
