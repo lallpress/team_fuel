@@ -5,7 +5,7 @@ RSpec.describe Donor, type: :model do
     
   it "is valid with valid attributes" do
       subject.donorName = "XYZ Corp"
-      subject.phoneNum = 5554443333
+      subject.phoneNum = "5554443333"
       expect(subject).to be_valid
   end
   

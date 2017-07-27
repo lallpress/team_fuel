@@ -11,7 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20170726230716) do
+
 
   create_table "donors", force: :cascade do |t|
     t.string   "donorName"
@@ -21,12 +23,14 @@ ActiveRecord::Schema.define(version: 20170726230716) do
   end
 
   create_table "inventories", force: :cascade do |t|
+
     t.integer  "itemnum"
     t.integer  "orgnum"
     t.integer  "quantity"
     t.date     "expires"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+
   end
 
   create_table "items", force: :cascade do |t|

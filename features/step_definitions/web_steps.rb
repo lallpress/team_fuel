@@ -41,7 +41,7 @@ When /^(.*) within (.*[^:]):$/ do |step, parent, table_or_string|
   with_scope(parent) { When "#{step}:", table_or_string }
 end
 
-Given /^(?:|I )am on (.+)$/ do |page_name|
+Given /^(?:|I )am on the (.+) page$/ do |page_name|
   visit path_to(page_name)
 end
 
@@ -251,4 +251,26 @@ end
 
 Then /^show me the page$/ do
   save_and_open_page
+end
+
+Given(/^the following donors exist:$/) do |table|
+  table.hashes.each do |donor|
+    Donor.create!(donor)
+  end
+end
+
+When(/^I click on "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^I expect to see the edit donors form displayed$/) do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then(/^the phone number for "([^"]*)" should be "([^"]*)"$/) do |arg1, arg2|
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Given(/^I am on the edit form for "([^"]*)"$/) do |arg1|
+  pending # Write code here that turns the phrase above into concrete actions
 end
