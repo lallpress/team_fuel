@@ -1,8 +1,9 @@
 %h1 Listing inventories
 
-%table
+%table#inventories
   %thead
     %tr
+      -#%th{:class => @itemname_header}= link_to 'Item Name', items_path(:sort => 'itemName'), :id => 'itemname_header'
       %th Itemnum
       %th Orgnum
       %th Quantity
@@ -24,4 +25,4 @@
 
 %br
 
-= link_to 'New Inventory', new_inventory_path
+= link_to 'Add to Inventory', new_inventory_path
