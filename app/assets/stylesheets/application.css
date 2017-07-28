@@ -13,6 +13,65 @@
  *= require_tree .
  *= require_self
  */
+html, body {
+  margin: 0;
+  padding: 0;
+  background: White;
+  color: DarkSlateGrey;
+  font-family: Tahoma, Verdana, sans-serif;
+  font-size: 10pt;
+}
+div#main {
+  margin: 0;
+  padding: 0 20px 20px;
+}
+a {
+  background: transparent;
+  color: maroon;
+  text-decoration: underline;
+  font-weight: bold;
+}
+h1 {
+  color: maroon;
+  font-size: 150%;
+  font-style: italic;
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid DarkSlateGrey;
+}
+h1.title {
+  margin: 0 0 1em;
+  padding: 10px;
+  background-color: lightgreen;
+  color: white;
+  border-bottom: 4px solid black;
+  font-size: 2em;
+  font-style: normal;
+}
+a:link { 
+  color: black;
+}
+a:visited { 
+  color: black;
+}
+a:hover { 
+  background-color: transparent;
+  color: blue;
+}
+a:active { 
+  color: blue;
+}
+#notice #warning {
+  background: rosybrown;
+  margin: 1em 0;
+  padding: 4px;
+}
+form label {
+  display: block;
+  line-height: 25px;
+  font-weight: bold;
+  color: maroon;
+}
 
 u1 {
     list-style-type: none;
@@ -26,13 +85,13 @@ h1, h2, p {
     color: #27ae60;
 }
 
-h1 {
+/*h1 {
     font-family: 'Droid Serif', serif;
 }
 
 h2, p {
     font-family: 'Lato', sans-serif;
-}
+}*/
 
 #BannerDiv {
     border-radius: 25px;
@@ -42,5 +101,6 @@ h2, p {
     height: 250px;
     align-items: center;
     justify-content: center;
+    margin: auto;
 }
 

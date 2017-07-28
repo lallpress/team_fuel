@@ -8,19 +8,19 @@
                 - @organization.errors.full_messages.each do |msg|
                     %li= msg
     %p
-        = f.label :Organization
+        = f.label :org_name, :Organization
         %br/
         = f.text_field :org_name
     %p
-        = f.label :Address
+        = f.label  :address, :Address
         %br/
         = f.text_field :address
     %p
-        = f.label :Phone
+        = f.label :phone, :Phone
         %br/
         = f.text_field :phone
     %p
-        = f.label :Contact
+        = f.label :contact_id, :Contact
         %br/
         = f.text_field :contact_id
     %p

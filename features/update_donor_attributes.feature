@@ -11,12 +11,18 @@ Background: donor in database
     | XYZ Corp  | 402-654-9874  |
     | Test Inc. | 402-111-1111  |
 
-Scenario: Access edit donors form from donors page
-  Given I am on the Donors page
-  When I follow "XYZ Corp"
-  Then I should be on the edit donor page
+Scenario: Access donors page from home page
+  Given I am on the Fuel Donation Management System home page
+  When I follow "Current Donors"
+  Then I should be on the Current Donors page
+
   
-Scenario: Update a donor attribute
-  Given I am on the edit form for "XYZ Corp"
-  And I fill in "Phone" with "555-987-1234"
-  Then the phone number for "XYZ Corp" should be "555-987-1234"
+Scenario: Access to New Donor page
+    Given I am on the Current Donors page
+    When I follow "New Donor"
+    And I fill in "donorName" with "Mike Crook"
+    And I fill in "phone" with "402-554-9067"
+    And I press "Create Donor"
+    Then I should see "Mike Crook" 
+    
+
