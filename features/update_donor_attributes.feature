@@ -20,8 +20,8 @@ Scenario: Access donors page from home page
 Scenario: Access to New Donor page
     Given I am on the Current Donors page
     When I follow "New Donor"
-    And I fill in "donorName" with "Mike Crook"
-    And I fill in "phone" with "402-554-9067"
+    And I fill in "Name" with "Mike Crook"
+    And I fill in "Phone" with "402-554-9067"
     And I press "Create Donor"
     Then I should see "Mike Crook" 
     

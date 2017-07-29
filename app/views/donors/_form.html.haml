@@ -8,12 +8,12 @@
                 - @donor.errors.full_messages.each do |msg|
                     %li= msg
     %p
-        = f.label :donorName
+        = f.label :donorName, :Name
         %br/
         = f.text_field :donorName
     
     %p
-        = f.label :phone
+        = f.label :phoneNum, :Phone
         %br/
         = f.text_field :phoneNum
     
