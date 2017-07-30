@@ -44,10 +44,11 @@ a {
 }
 h1 {
   color: maroon;
-  font-size: 150%;
+  font-size: 250%;
   font-style: italic;
   display: block;
   width: 100%;
+  padding-bottom: 10px;
   border-bottom: 1px solid DarkSlateGrey;
 }
 h1.title {
@@ -94,7 +95,7 @@ u1 {
 h1, h2, p {
     text-align: center;
     color: black;
-    font-size: large;
+    font-size: 1.5em;
     /*#27ae60*/
 }
 
