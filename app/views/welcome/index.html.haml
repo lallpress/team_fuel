@@ -8,15 +8,16 @@
       %h1 Fuel
       %h2 Donation Management System
       %p Summer CSCI 4830 Team 4 Group Project
-    %div
+    #links
+    %p
       = link_to 'Current Items', controller: 'items' |
       \#{link_to 'New Item', new_item_path}
-    %div
+    %p
       = link_to 'Current Organizations', controller: 'organizations' |
       \#{link_to 'New Organization', new_organization_path}
-    %div
+    %p
       = link_to 'Current Donors', controller: 'donors' |
       \#{link_to 'New Donor', new_donor_path}
-    %div
+    %p
       = link_to 'Inventory', controller: 'inventories' |
       \#{link_to 'Add to Inventory', new_inventory_path}

@@ -25,4 +25,16 @@ Scenario: Access to New Donor page
     And I press "Create Donor"
     Then I should see "Mike Crook" 
     
+# Scenario: Access edit donors form from donors page
+#   Given I am on the donors page
+#   When I follow "XYZ Corp"
+#   Then I should be on the edit donor page
+
+
+
+# Scenario: Update a donor attribute
+#   Given I am on the edit form for "XYZ Corp"
+#   And I fill in "Phone" with "555-987-1234"
+#   Then the phone number for "XYZ Corp" should be "555-987-1234"
+    
 

@@ -33,6 +33,8 @@ module NavigationHelpers
       
     when /^the New Donor page$/ then '/donors/new'
     
+    #when /^the edit donor page$/ then 'donors/:id/edit'
+    
     when /^the New Donor page$/
       new_donor_path
      
@@ -43,7 +45,7 @@ module NavigationHelpers
       donors_path
       
     when /^the edit donor page$/
-      edit_donor_path
+      :id/edit_donor_path
       
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
