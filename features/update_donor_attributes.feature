@@ -28,8 +28,8 @@ Scenario: Access to New Donor page
 # Scenario: Access edit donors form from donors page
 #   Given I am on the donors page
 #   When I follow "XYZ Corp"
-#   Then I should be on "XYZ Corp" page
-#   # edit donor page
+#   Then I should be on page for "XYZ Corp"
+  # edit donor page
 
 
 
@@ -37,5 +37,4 @@ Scenario: Access to New Donor page
 #   Given I am on the edit form for "XYZ Corp"
 #   And I fill in "Phone" with "555-987-1234"
 #   Then the phone number for "XYZ Corp" should be "555-987-1234"
-    
 

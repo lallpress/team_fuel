@@ -51,6 +51,9 @@ module NavigationHelpers
      when /^the edit donor page$/
       edit_donor_path
       
+    when /^the page for "(.*)"$/
+      items_path Item.find_by_category($1)
+      
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
