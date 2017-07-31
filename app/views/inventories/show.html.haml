@@ -12,6 +12,9 @@
 %p
   %strong Expired Date:
   = @inventory.expires
+%p
+  %strong Category:
+  = @inventory.category
 
 = link_to 'Edit', edit_inventory_path(@inventory)
 \|

@@ -44,8 +44,12 @@ module NavigationHelpers
     when /^the donors page$/ 
       donors_path
       
-    when /^the edit donor page$/
-      :id/edit_donor_path
+    # when /^the "(.+)" page$/
+    #   show_donor_path
+      # :id/edit_donor_path
+      
+     when /^the edit donor page$/
+      edit_donor_path
       
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
