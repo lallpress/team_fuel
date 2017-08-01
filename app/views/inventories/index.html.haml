@@ -8,6 +8,7 @@
       %th Organization Number
       %th Quantity
       %th Expired Date
+      %th Category
       %th
       %th
       %th
@@ -19,6 +20,7 @@
         %td= inventory.orgnum
         %td= inventory.quantity
         %td= inventory.expires
+        %td= inventory.category
         %td= link_to 'Show', inventory
         %td= link_to 'Edit', edit_inventory_path(inventory)
         %td= link_to 'Destroy', inventory, method: :delete, data: { confirm: 'Are you sure?' }

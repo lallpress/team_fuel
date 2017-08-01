@@ -259,19 +259,19 @@ Given(/^the following donors exist:$/) do |table|
   end
 end
 
-When(/^I click on "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
-end
+# When(/^I click on "([^"]*)"$/) do |arg1|
+#   pending # Write code here that turns the phrase above into concrete actions
+# end
 
-Then(/^I expect to see the edit donors form displayed$/) do
-  pending # Write code here that turns the phrase above into concrete actions
-end
+# Then(/^I expect to see the edit donors form displayed$/) do
+#   pending # Write code here that turns the phrase above into concrete actions
+# end
 
-Then(/^the phone number for "([^"]*)" should be "([^"]*)"$/) do |arg1, arg2|
-  pending # Write code here that turns the phrase above into concrete actions
-end
+# Then(/^the phone number for "([^"]*)" should be "([^"]*)"$/) do |arg1, arg2|
+#   pending # Write code here that turns the phrase above into concrete actions
+# end
 
-Given(/^I am on the edit form for "([^"]*)"$/) do |arg1|
-  pending # Write code here that turns the phrase above into concrete actions
-end
+# Given(/^I am on the edit form for "([^"]*)"$/) do |arg1|
+#   pending # Write code here that turns the phrase above into concrete actions
+# end
 
