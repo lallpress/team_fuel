@@ -32,6 +32,8 @@ module NavigationHelpers
     when /^the Current Donors page$/ then '/donors'
       
     when /^the New Donor page$/ then '/donors/new'
+      
+    when /^the Edit Donor page$/ then '/donors/:id/edit'
     
     #when /^the edit donor page$/ then 'donors/:id/edit'
     
@@ -44,8 +46,19 @@ module NavigationHelpers
     when /^the donors page$/ 
       donors_path
       
+    # when /^the "(.+)" page$/
+    #   :id/edit_donor_path
+    when /^I am on "(.*)"$/
+      donors_path Donor.find_by_name($1)
+      
     when /^the edit donor page$/
-      :id/edit_donor_path
+      edit_donor_path
+      
+    when /^the page for "(.*)"$/
+      items_path Item.find_by_item($1)
+      
+    when /^the edit page for "(.*)"$/
+      edit_item_path Item.find_by_item($1)
       
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
