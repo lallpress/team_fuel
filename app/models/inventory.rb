@@ -5,5 +5,6 @@ class Inventory < ActiveRecord::Base
 
     delegate :get_itemName, :get_category, to: :items
     delegate :get_organization, to: :organizations
-
+    
+   
 end

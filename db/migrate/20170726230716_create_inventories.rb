@@ -5,6 +5,7 @@ class CreateInventories < ActiveRecord::Migration
       t.integer :orgnum
       t.integer :quantity
       t.date :expires
+      t.category :category
 
       t.timestamps null: false
     end

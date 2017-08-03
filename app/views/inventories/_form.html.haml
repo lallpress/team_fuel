@@ -1,4 +1,4 @@
-= form_for ([@inventory, @item, @organization]) do |f|
+= form_for @inventory do |f|
   - if @inventory.errors.any?
     #error_explanation
       %h2= "#{pluralize(@inventory.errors.count, "error")} prohibited this inventory from being saved:"
@@ -8,8 +8,13 @@
 
   .field
     = f.label :ItemNum
-    /* #= f.text_field get_itemName(:itemnum) */
+    // f.text_field get_itemName(:itemnum)
     =f.text_field :itemnum
+  .field
+    = f.label :Organization
+    /& #= f.text_field get_organization(:orgnum) */
+    //= f.select :org_name, options_for_select([Organization.org_name])
+    = f.text_field :orgnum
   .field
     = f.label :Quantity
     = f.number_field :quantity
@@ -19,10 +24,9 @@
   .field
     = f.label :Category
     /* #= f.text_field get_category(:itemnum) */
-    = f.text_field :category
-  .field
-    = f.label :Organization
-    /& #= f.text_field get_organization(:orgnum) */
-    = f.text_field :orgnum
+    // = f.text_field :category
+    // <%= f.select :desired_attribute, ['option1', 'option2']%>
+    = f.select :category, options_for_select([ "Canned", "Dried Food", "Soup", "Supllies", "Milk/Juice" ], " ") 
+ 
   .actions
     = f.submit 'Save'
