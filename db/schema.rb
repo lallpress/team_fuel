@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170731191716) do
+ActiveRecord::Schema.define(version: 20170803050815) do
 
   create_table "donors", force: :cascade do |t|
     t.string   "donorName"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 20170731191716) do
 
   create_table "inventories", force: :cascade do |t|
     t.integer  "itemnum"
-    t.integer  "orgnum"
+    t.string   "orgnum"
     t.integer  "quantity"
     t.date     "expires"
     t.datetime "created_at", null: false
