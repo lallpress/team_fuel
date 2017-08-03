@@ -33,9 +33,12 @@ module NavigationHelpers
       
     when /^the New Donor page$/ then '/donors/new'
       
-    when /^the Edit Donor page$/ then '/donors/:id/edit'
+    #when /^the Edit Donor page$/ then '/donors/:id/edit'
     
     #when /^the edit donor page$/ then 'donors/:id/edit'
+    when /^the Edit page$/ #then 'organizations/$1'
+     edit_organization_path($1)
+     
     
     when /^the New Donor page$/
       new_donor_path
@@ -57,8 +60,18 @@ module NavigationHelpers
     when /^the page for "(.*)"$/
       items_path Item.find_by_item($1)
       
+    # when /^the edit page for "(.*)"$/
+    #   edit_item_path Item.find_by_item($1)
+      
     when /^the edit page for "(.*)"$/
-      edit_item_path Item.find_by_item($1)
+      edit_organization_path(Organization.find_by_org_name($1))
+      
+    Given(/^the following organizations exist:$/) do |table|
+      table.hashes.each do |org|
+        Organization.create!(org)
+      end
+    end
+    
       
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:

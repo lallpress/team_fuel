@@ -25,7 +25,7 @@ Scenario: Access to New Donor page
     And I press "Create Donor"
     Then I should see "Mike Crook" 
     
-Scenario: Access show donors form from donors page
+Scenario: Access edit donors form from donors page
   Given I am on the donors page
   When I follow "XYZ Corp"
   Then I follow "Edit"
