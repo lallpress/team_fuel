@@ -1,8 +1,9 @@
 class DonorsController < ApplicationController
+    helper_method :sort_column, :sort_direction
     
     # gets all Donors
     def index
-        @donors = Donor.all
+        @donors = Donor.order(sort_column + " " + sort_direction)
     end
     
     # Gets a donor based on ID
@@ -45,5 +46,13 @@ class DonorsController < ApplicationController
     private
         def donor_params
             params.require(:donor).permit(:donorName, :phoneNum)
+        end
+        
+        def sort_column
+            Donor.column_names.include?(params[:sort]) ? params[:sort] : "donorName"
+        end
+  
+        def sort_direction
+            %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
         end
 end

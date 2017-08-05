@@ -3,8 +3,8 @@
     = link_to 'New Donor', new_donor_path
 %table#donors
     %tr
-        %th Donor
-        %th Phone
+        %th= sortable "donorName", "Donor"
+        %th= sortable "phoneNum", "Phone"
     - @donors.each do |donor|
         %tr
             %td= link_to donor.donorName, donor_path(donor)
