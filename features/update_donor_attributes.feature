@@ -1,8 +1,8 @@
-Feature: update donor attributes
+Feature: Checking CRUD functions for Donors page
   
     As a staff member
-    So that I can update a donor
-    I want to open an edit form from the Donors page 
+    So that I can update, delete, and create a donor
+    
     
 Background: donor in database
   

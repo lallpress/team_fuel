@@ -259,6 +259,47 @@ Given(/^the following donors exist:$/) do |table|
   end
 end
 
+Given(/^the following organizations exist:$/) do |table|
+  table.hashes.each do |org|
+    Organization.create!(org)
+  end
+end
+
+Given(/^the following inventories exist:$/) do |table|
+  table.hashes.each do |inventory|
+    Inventory.create!(inventory)
+  end
+end
+
+Given /^a confirmation box saying "([^"]*)" should pop up$/ do |message|
+  @expected_message = message
+end
+
+Given /^I want to click "([^"]*)"$/ do |option|
+  retval = (option == "Ok") ? "true" : "false"
+
+  # page.evaluate_script("window.confirm = function (msg) {
+  #   $.cookie('confirm_message', msg)
+  #   return #{retval}
+  # }")
+end
+
+When(/^I delete the Organization with the Name of "(.*?)"$/) do |org|
+  find('tr', text: org).click_link("Delete")
+end
+
+When(/^I show the Organization with the Name of "(.*?)"$/) do |org|
+  find('tr', text: org).click_link("Show")
+end
+
+When(/^I delete the Inventory with the number of "(.*?)"$/) do |number|
+  find('tr', text: number).click_link("Destroy")
+end
+
+When(/^I show the Inventory with the number of "(.*?)"$/) do |number|
+  find('tr', text: number).click_link("Show")
+end
+
 # When(/^I click on "([^"]*)"$/) do |arg1|
 #   pending # Write code here that turns the phrase above into concrete actions
 # end

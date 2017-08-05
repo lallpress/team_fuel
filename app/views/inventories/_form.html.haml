@@ -7,22 +7,22 @@
           %li= message
 
   .field
-    = f.label :ItemNum
+    = f.label :itemnum, :ItemNum
     // f.text_field get_itemName(:itemnum)
     =f.text_field :itemnum
   .field
-    = f.label :Organization
+    = f.label :orgnum, :Organization
     /& #= f.text_field get_organization(:orgnum) */
     //= f.select :org_name, options_for_select([Organization.org_name])
     = f.text_field :orgnum
   .field
-    = f.label :Quantity
+    = f.label :quantity, :Quantity
     = f.number_field :quantity
   .field
-    = f.label :Expiration
+    = f.label :expires, :Expiration
     = f.date_select :expires
   .field
-    = f.label :Category
+    = f.label :category, :Category
     /* #= f.text_field get_category(:itemnum) */
     // = f.text_field :category
     // <%= f.select :desired_attribute, ['option1', 'option2']%>

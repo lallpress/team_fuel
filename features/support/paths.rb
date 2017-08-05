@@ -33,12 +33,17 @@ module NavigationHelpers
       
     when /^the New Donor page$/ then '/donors/new'
       
+     when /^the Listing Inventories page$/ then '/inventories'
+    
+      
     #when /^the Edit Donor page$/ then '/donors/:id/edit'
     
     #when /^the edit donor page$/ then 'donors/:id/edit'
     when /^the Edit page$/ #then 'organizations/$1'
      edit_organization_path($1)
      
+    # when /^the Listing Inventories page$/
+    #   index_inventories_path
     
     when /^the New Donor page$/
       new_donor_path
