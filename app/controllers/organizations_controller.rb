@@ -3,9 +3,11 @@
 # delete Organizations
 
 class OrganizationsController < ApplicationController
+    helper_method :sort_column, :sort_direction
+    
     # Gets all Organizations
     def index
-        @organizations = Organization.all
+        @organizations = Organization.order(sort_column + " " + sort_direction)
     end
     
     # Gets an Organization based on ID
@@ -56,5 +58,13 @@ class OrganizationsController < ApplicationController
     private
         def organization_params
             params.require(:organization).permit(:org_name, :address, :phone, :contact_id)
+        end
+        
+        def sort_column
+            Organization.column_names.include?(params[:sort]) ? params[:sort] : "org_name"
+        end
+  
+        def sort_direction
+            %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
         end
 end
