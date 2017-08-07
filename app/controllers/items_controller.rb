@@ -3,9 +3,11 @@
 # delete Items
 
 class ItemsController < ApplicationController
+    helper_method :sort_column, :sort_direction
+    
     # Gets all Items
     def index
-        @items = Item.all
+        @items = Item.order(sort_column + " " + sort_direction)
     end
     
     # Gets an item based on ID
@@ -56,5 +58,13 @@ class ItemsController < ApplicationController
     private
         def item_params
             params.require(:item).permit(:itemName, :category)
+        end
+        
+        def sort_column
+            Donor.column_names.include?(params[:sort]) ? params[:sort] : "itemName"
+        end
+
+        def sort_direction
+            %w[asc desc].include?(params[:direction]) ? params[:direction] : "asc"
         end
 end

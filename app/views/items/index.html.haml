@@ -3,7 +3,7 @@
   = link_to 'New Item', new_item_path
 %table#items
   %tr
-    %th Item
+    %th= sortable "itemName", "Item"
     %th Category
     %th{:colspan => "3"}
   - @items.each do |item|
