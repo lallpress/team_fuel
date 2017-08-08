@@ -1,5 +1,7 @@
 class InventoriesController < ApplicationController
   before_action :set_inventory, only: [:show, :edit, :update, :destroy]
+  before_action :set_organization, only: [:show, :edit, :update]
+  before_action :set_item, only: [:show, :edit, :update]
 
   # GET /inventories
   # GET /inventories.json
@@ -66,9 +68,19 @@ class InventoriesController < ApplicationController
     def set_inventory
       @inventory = Inventory.find(params[:id])
     end
+    
+    def set_item
+      # @inventory.itemnum
+      @item = Item.find_by! itemnum == #{@inventory.itemnum}
+    end
+    
+    def set_organization
+      # :orgnum = @inventory.orgnum 
+      @organization = Organization.find_by! orgnum == #{@inventory.orgnum}
+    end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def inventory_params
-      params.require(:inventory).permit(:itemnum, :orgnum, :quantity, :expires)
+      params.fetch(:inventory, {})
     end
 end

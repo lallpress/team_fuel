@@ -1,12 +1,16 @@
 class Item < ActiveRecord::Base
     validates_presence_of :itemName, :category
-    belongs_to :inventory
+    has_and_belongs_to_many :inventories, :foreign_key => 'inventory_id', :primary_key => 'item_id'
     public
-    def get_itemName(index)
-        return self[index].itemName
+    attr_accessor :itemName, :category
+    
+    def get_itemName
+        #return self[index].itemName
+        return "Howdy"
     end
     
-    def get_category(index)
-        return self[index].category
+    def get_category
+        #return self[index].category
+        return "Hello"
     end
 end

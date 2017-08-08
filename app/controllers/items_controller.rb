@@ -37,6 +37,10 @@ class ItemsController < ApplicationController
     # Edits an Item based on ID
     def update
         @item = Item.find(params[:id])
+    
+    # Variables in controller introduce model methods for use in view
+       # @category = @item.get_category
+        # @itemName = @item.get_itemName
         
         if @item.update(item_params)
             redirect_to @item

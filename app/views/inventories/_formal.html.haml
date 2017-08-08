@@ -5,18 +5,12 @@
       %ul
         - @inventory.errors.full_messages.each do |message|
           %li= message
-          
-  // - @this_item = Item.find(params[:id]) 
-  // - @item_name = @this_item.itemName
-
-  //- :itemName = @item.itemName
-  = debug params 
-  = debug session 
-  logger.info session.inspect
+  - @this_item = Item.find(params[:id]) 
+  - @item_name = @this_item.itemName
   
   -Organization.each do |org|
-    - @orgnames[org.orgnum] = org.org_name
- 
+  - @orgnames[org.orgnum] = org.org_name
+  -end
  
   .field
     = f.label :ItemNum

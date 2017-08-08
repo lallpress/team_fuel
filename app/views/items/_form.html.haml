@@ -7,13 +7,18 @@
       %u1
         - @item.errors.full_messages.each do |msg|
           %li= msg
+        #end
+    #end      
   %p
     = f.label :itemName
     %br/
+    /* = f.text_field :itemName */
     = f.text_field :itemName
   %p
     = f.label :category
     %br/
+    /* = f.text_field :category */
     = f.text_field :category
+
   %p
     = f.submit
