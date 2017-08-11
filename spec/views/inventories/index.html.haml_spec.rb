@@ -6,12 +6,16 @@ RSpec.describe "inventories/index", type: :view do
       Inventory.create!(
         :itemnum => 1,
         :orgnum => 2,
-        :quantity => 3
+        :quantity => 3,
+        :expires => 4,
+        :category => 5
       ),
       Inventory.create!(
         :itemnum => 1,
         :orgnum => 2,
-        :quantity => 3
+        :quantity => 3,
+        :expires => 4,
+        :category => 5
       )
     ])
   end

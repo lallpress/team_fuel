@@ -24,11 +24,21 @@ RSpec.describe InventoriesController, type: :controller do
   # Inventory. As you add validations to Inventory, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    #skip("Add a hash of attributes valid for your model")
+      {itemnum: 1,
+      orgnum: 1,
+      quantity: 1,
+      expires: Date.parse('08-11-2017'),
+      category: 1}
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    #skip("Add a hash of attributes invalid for your model")
+    {itemnum: 1,
+      orgnum: 1,
+      quantity: 1,
+      category: ""
+    }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,14 +113,23 @@ RSpec.describe InventoriesController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        #skip("Add a hash of attributes valid for your model")
+         {itemnum: 1,
+          orgnum: 1,
+          quantity: 10,
+          expires: Date.parse('09-11-2017'),
+          category: 1}
+        
       }
 
       it "updates the requested inventory" do
         inventory = Inventory.create! valid_attributes
+        #newinventory = Inventory.create! new_attributes
         put :update, {:id => inventory.to_param, :inventory => new_attributes}, valid_session
         inventory.reload
-        skip("Add assertions for updated state")
+        #skip("Add assertions for updated state")
+        #expect(assigns(:inventory)).to eq(newinventory)
+        expect(inventory.quantity).to eq(10)
       end
 
       it "assigns the requested inventory as @inventory" do
