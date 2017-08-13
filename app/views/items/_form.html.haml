@@ -12,9 +12,9 @@
     %br/
     = f.text_field :itemName
   %p
-    = f.label :category
+    = f.label :category, :Category
     %br/
     = f.select :category, options_for_select([ "Canned", "Dried Food", "Soup", "Supllies", "Milk/Juice" ], " ") 
-    // = f.text_field :category
+    //= f.text_field :category
   %p
     = f.submit

@@ -300,6 +300,18 @@ When(/^I show the Inventory with the number of "(.*?)"$/) do |number|
   find('tr', text: number).click_link("Show")
 end
 
+When(/^I edit the Item with the number of "(.*?)"$/) do |number|
+  find('tr', text: number).click_link("Edit")
+end
+
+When(/^I delete the Item with the number of "([^"]*)"$/) do |item|
+  find('tr', text: item).click_link("Delete")
+end
+
+When(/^I show the Item with the number of "([^"]*)"$/) do |item|
+  find('tr', text: item).click_link("Show")
+end
+
 # When(/^I click on "([^"]*)"$/) do |arg1|
 #   pending # Write code here that turns the phrase above into concrete actions
 # end

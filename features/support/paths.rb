@@ -20,36 +20,32 @@ module NavigationHelpers
       '/organizations'
       
     when /^the (Fuel Donation Management System )?home\s?page$/ then '/welcome/index'
-    #when /^the Fuel Donation Management System home page$/ then '/organizations'
-    #when /^the home page$/ then '/organizations'
-      
    
-    #when /^the Fuel Donation Management System home page$/ then '/donors'
-    #when /^the home page$/ then '/donors'
       
     when /^the Current Organizations page$/ then '/organizations'
-#      organization_path Organization.all
+
     when /^the Current Donors page$/ then '/donors'
       
-    when /^the New Donor page$/ then '/donors/new'
+    when /^the Current Items page$/ then '/items'
       
-     when /^the Listing Inventories page$/ then '/inventories'
-    
+    when /^the Listing Inventories page$/ then '/inventories'
+   
       
-    #when /^the Edit Donor page$/ then '/donors/:id/edit'
-    
-    #when /^the edit donor page$/ then 'donors/:id/edit'
-    when /^the Edit page$/ #then 'organizations/$1'
-     edit_organization_path($1)
+    # when /^the Edit page$/ 
+    # edit_organization_path($1)
      
-    # when /^the Listing Inventories page$/
-    #   index_inventories_path
     
     when /^the New Donor page$/
       new_donor_path
+      
+    when /^the New Item page$/
+      new_items_path
      
     when /^the edit donor page for "(.+)"$/
       edit_donor_path
+      
+    when /^the edit item page for "(.+)"$/
+      edit_item_path
       
     when /^the donors page$/ 
       donors_path
@@ -62,11 +58,12 @@ module NavigationHelpers
     when /^the edit donor page$/
       edit_donor_path
       
+    when /^the edit item page$/
+      edit_item_path
+      
     when /^the page for "(.*)"$/
       items_path Item.find_by_item($1)
-      
-    # when /^the edit page for "(.*)"$/
-    #   edit_item_path Item.find_by_item($1)
+  
       
     when /^the edit page for "(.*)"$/
       edit_organization_path(Organization.find_by_org_name($1))
