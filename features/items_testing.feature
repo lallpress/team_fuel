@@ -1,8 +1,8 @@
-Feature: testing Organization page
+Feature: testing Items page
     As a staff member, I want to click a button on the homepage, add new item
     so that I can navigate directly to the Items page.
 
-Background: an empty database from beginning and store organization name when added
+Background: an empty database from beginning and store item name when added
   Given the following items exist:
     | itemName     | category      | 
     | 12345        | Canned        | 
@@ -29,7 +29,7 @@ Scenario: Edit an existing item to page
     And I press "Update Item"
     Then I should see "12346"
     
-Scenario: Delete an existing organization to page
+Scenario: Delete an existing item to page
     Given I am on the Fuel Donation Management System home page
     When I follow "Current Items"
     And I delete the Item with the number of "12345"
@@ -37,7 +37,7 @@ Scenario: Delete an existing organization to page
     And I want to click "Ok"
     Then I should not see "12345"
     
-Scenario: Show an existing record of organization
+Scenario: Show an existing record of items
     Given I am on the Fuel Donation Management System home page
     When I follow "Current Items"
     And I show the Item with the number of "12345"

@@ -25,9 +25,9 @@ ActiveRecord::Schema.define(version: 20170803050815) do
     t.string   "orgnum"
     t.integer  "quantity"
     t.date     "expires"
+    t.string   "category"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.string   "category"
   end
 
   create_table "items", force: :cascade do |t|

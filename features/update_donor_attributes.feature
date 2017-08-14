@@ -33,3 +33,22 @@ Scenario: Access edit donors form from donors page
   And I press "Update Donor"
   And I follow "XYZ Corp"
   Then I should see "Phone: 555-987-1234"
+  
+  
+Scenario: Checking for adding function message pop up
+  Given I am on the Current Donors page
+  When I follow "New Donor"
+  And I fill in "Name" with "Mike Crook"
+  And I fill in "Phone" with "402-554-9067"
+  And I press "Create Donor"
+  Then a confirmation box saying "Donor was successfully added!" should pop up
+  
+Scenario: Checking for edit function message pop up
+  Given I am on the donors page
+  When I follow "XYZ Corp"
+  Then I follow "Edit"
+  And I fill in "Phone" with "555-987-1234"
+  And I press "Update Donor"
+  Then a confirmation box saying "Donor was successfully updated!" should pop up
+
+

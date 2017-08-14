@@ -30,6 +30,7 @@ background-size: cover;
   font-size: 10pt;
   overflow-x: auto;
   overflow-y: auto;
+  height: 100%;
   
 }
 div#main {
