@@ -3,13 +3,11 @@ class InventoriesController < ApplicationController
 
 
   # GET /inventories
-  # GET /inventories.json
   def index
     @inventories = Inventory.all
   end
 
-  # GET /inventories/1
-  # GET /inventories/1.json
+  # GET /inventories/
   def show
   end
 
@@ -17,13 +15,12 @@ class InventoriesController < ApplicationController
   def new
     @inventory = Inventory.new
   end
-
-  # GET /inventories/1/edit
+  
+  # GET /inventories/
   def edit
   end
 
   # POST /inventories
-  # POST /inventories.json
   def create
     @inventory = Inventory.new(inventory_params)
 
@@ -38,8 +35,8 @@ class InventoriesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /inventories/1
-  # PATCH/PUT /inventories/1.json
+  # PATCH/PUT /inventories
+
   def update
     respond_to do |format|
       if @inventory.update(inventory_params)
@@ -52,8 +49,7 @@ class InventoriesController < ApplicationController
     end
   end
 
-  # DELETE /inventories/1
-  # DELETE /inventories/1.json
+  # DELETE /inventories
   def destroy
     @inventory.destroy
     respond_to do |format|

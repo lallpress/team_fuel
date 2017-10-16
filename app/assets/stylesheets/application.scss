@@ -1,0 +1,28 @@
+$font-stack: Helvetica, sans-serif;
+$text-color:                 #555555;
+$light-text-color:           #a0a0a0;
+
+body {
+    font: 100% $font-stack;
+    color: $text-color;
+}
+
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    
+    li { display: inline-block; }
+    
+    a {
+        display: block;
+        padding: 6px 12px;
+        text-decoration: none;
+    }
+}
+
+button {
+    text-decoration: none;
+}

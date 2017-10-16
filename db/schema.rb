@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170803050815) do
+ActiveRecord::Schema.define(version: 20171016134021) do
 
   create_table "donors", force: :cascade do |t|
     t.string   "donorName"
@@ -30,11 +30,18 @@ ActiveRecord::Schema.define(version: 20170803050815) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "inventories_items", id: false, force: :cascade do |t|
+    t.integer "item_id",      null: false
+    t.integer "inventory_id", null: false
+  end
+
+  add_index "inventories_items", ["inventory_id", "item_id"], name: "index_inventories_items_on_inventory_id_and_item_id"
+  add_index "inventories_items", ["item_id", "inventory_id"], name: "index_inventories_items_on_item_id_and_inventory_id"
+
   create_table "items", force: :cascade do |t|
     t.string   "category"
     t.string   "itemName"
     t.date     "expiration"
-    t.integer  "donationID"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

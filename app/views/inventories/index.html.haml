@@ -1,17 +1,13 @@
-%h1 Listing Inventories
+%h1 Pantry Inventory
 
 %table#inventories
   %thead
     %tr
-      -#%th{:class => @itemname_header}= link_to 'Item Name', items_path(:sort => 'itemName'), :id => 'itemname_header'
-      %th Item Number
-      %th Organization Number
+      %th Item
+      %th Organization
       %th Quantity
-      %th Expired Date
+      %th Expiration Date
       %th Category
-      %th
-      %th
-      %th
 
   %tbody
     - @inventories.each do |inventory|

@@ -26,7 +26,7 @@
     /* #= f.text_field get_category(:itemnum) */
     // = f.text_field :category
     // <%= f.select :desired_attribute, ['option1', 'option2']%>
-    = f.select :category, options_for_select([ "Canned", "Dried Food", "Soup", "Supllies", "Milk/Juice", "Other" ], " ") 
+    = f.select :category, options_for_select([ "Canned", "Dry", "Fresh", "Beverages", "Other" ], " ") 
  
   .actions
     = f.submit 'Save'

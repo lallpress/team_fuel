@@ -1,17 +1,14 @@
 %html
   %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %link{:href => "https://fonts.googleapis.com/css?family=Droid+Serif|Lato", :rel => "stylesheet"}/
-    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}/
   %body
-    #BannerDiv
-      %p Summer CSCI 4830 Team 4 Group Project
-      
-    %button
-      = link_to 'Current Items', controller: 'items'
-    %button
-      = link_to 'Current Organizations', controller: 'organizations'
-    %button
-      = link_to 'Current Donors', controller: 'donors'
-    %button
-      = link_to 'Inventory', controller: 'inventories'
+    .banner
+      %p 
+        %h1 Fuel
+        %h2 Donation Management System
+    
+    .actions
+      %button
+        = link_to 'Pantry', controller: 'inventories'
+      %button
+        = link_to 'Organizations', controller: 'organizations'
+
